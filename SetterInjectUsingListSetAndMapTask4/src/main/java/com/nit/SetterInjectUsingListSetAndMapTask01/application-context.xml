@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+		<bean class="com.nit.SetterInjectUsingListSetAndMapTask01.Mall" id="mall">
+		<property name="id" value="101"></property>
+		<property name="name" value="Ram"></property>
+		<property name="parkingCharges">
+		<map>
+		<entry key="ball" value="50.0"></entry>
+		</map>
+		</property>
+		<property name="owner" ref="own"></property>
+		
+		</bean>
+		
+		
+		<bean class="com.nit.SetterInjectUsingListSetAndMapTask01.Owner" id="own">
+		<property name="ownerId" value=" 501"></property>
+		<property name="ownerName" value="Uma"></property>
+		<property name="number" value="9942365454"></property>
+		</bean>
+		
+		
+</beans>

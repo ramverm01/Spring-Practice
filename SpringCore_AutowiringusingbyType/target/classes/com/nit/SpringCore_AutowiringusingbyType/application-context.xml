@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+           
+           <bean class="com.nit.SpringCore_AutowiringusingbyType.Doctor" id="doctor">
+           <property name="doctorId" value="101"></property>
+           <property name="doctorName" value="Ram"></property>
+           <property name="specialization" value="heart"></property>
+           </bean>
+           
+           <bean class="com.nit.SpringCore_AutowiringusingbyType.Patient" id="patient"  autowire="byType">
+           <property name="patientId" value="201"></property>
+           <property name="patientName" value="Uma"></property>
+           <property name="disease" value="heart"></property>
+           </bean>
+           
+           
+</beans>

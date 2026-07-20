@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+		<bean class="com.nit.SetterInjectUsingListSetAndMapTask01.University" id="university">
+		<property name="id" value="101"></property>
+		<property name="name" value="CGC University"></property>
+		<property name="department">
+		<list>
+			<value>CSE</value>
+		</list>
+		</property>
+		<property name="campusFacilities">
+		<set>
+			<value>Library</value>
+			<value>Hostel</value>
+			<value>Sport</value>
+		</set>
+		</property>
+		<property name="academicPrograms">
+		<map>
+			<entry key="b.tech" value="4"></entry>
+		</map>
+		</property>
+		<property name="viceChancellor" ref="vice"></property>
+		</bean>
+		
+		<bean class="com.nit.SetterInjectUsingListSetAndMapTask01.ViceChancellor" id="vice">
+		<property name="viceChancellorName" value="Uma"></property>
+		<property name="qualification" value="M.tech"></property>
+		<property name="experience" value="5"></property>
+		
+		</bean>
+</beans>

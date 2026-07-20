@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+           
+          <bean class="com.nit.LambokAPISetterAndConstructorTask02.Department" id="department">
+          <constructor-arg value="101"></constructor-arg>
+          <constructor-arg value="It"></constructor-arg>
+          <constructor-arg value="Hyderabad"></constructor-arg>
+          </bean>
+          <bean class="com.nit.LambokAPISetterAndConstructorTask02.Employee" id="employee">
+          <constructor-arg value="102"></constructor-arg>
+          <constructor-arg value="Ram"></constructor-arg>          
+          <constructor-arg value="45000"></constructor-arg>          
+          <constructor-arg ref="department"></constructor-arg>
+          
+          </bean>
+</beans>

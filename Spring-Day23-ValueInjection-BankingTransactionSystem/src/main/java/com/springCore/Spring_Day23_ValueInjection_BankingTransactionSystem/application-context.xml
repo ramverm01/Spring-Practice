@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<beans
+	xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+     xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     https://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context
+     https://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/util
+     https://www.springframework.org/schema/util/spring-util.xsd">
+    <util:properties id="myprops" location="classpath:com/springCore/Spring_Day23_ValueInjection_BankingTransactionSystem/application.properties">
+        </util:properties>
+		<!-- Since we are using ClassPathXmlApplicationContext, we still need this
+			tag below, because the bean is not declared inside the configuration file — instead, it is declared using @Component. -->
+       <context:component-scan base-package="com">  </context:component-scan>
+</beans>
